@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Personal Profile Card</title>
+<style>
+ 
+  /* ---------- 1. Basic page setup ---------- */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* padding/border included in width, easier to size things */
+  }
+ 
+  body {
+    height: 100vh;
+    display: flex;          /* Flexbox lets us center the card easily */
+    align-items: center;    /* center vertically */
+    justify-content: center;/* center horizontally */
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: hsl(214, 50%, 36%);
+  }
+ 
+  /* ---------- 2. The card itself ---------- */
+  .card {
+    width: 280px;
+    background: #ffffff;
+ 
+    /* Rounded corners */
+    border-radius: 16px;
+ 
+    /* Box shadow - gives the card a "lifted" look */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+ 
+    padding: 30px 20px;
+    text-align: center;
+ 
+    display: flex;          /* Flexbox again, but this time to stack items */
+    flex-direction: column; /* stack children top-to-bottom */
+    align-items: center;    /* center children horizontally */
+    gap: 12px;              /* even spacing between each child element */
+  }
+ 
+  /* ---------- 3. Profile image ---------- */
+  .profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;     /* 50% turns a square image into a circle */
+    object-fit: cover;      /* keeps the image from stretching */
+    border: 3px solid #eef1f5;
+  }
+ 
+  /* ---------- 4. Name & job title ---------- */
+  .name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #222;
+  }
+ 
+  .job-title {
+    font-size: 14px;
+    color: #6b7280;         /* soft gray, lower visual priority than the name */
+    margin-top: -8px;       /* pulls it a bit closer to the name */
+  }
+ 
+  /* ---------- 5. Bio text ---------- */
+  .bio {
+    font-size: 14px;
+    color: #4b5563;
+    line-height: 1.5;
+  }
+ 
+  /* ---------- 6. Follow button ---------- */
+  .follow-btn {
+    margin-top: 10px;
+    padding: 10px 28px;
+    border: none;
+    border-radius: 24px;    /* fully rounded "pill" button */
+    background: #4f46e5;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease; /* smooth hover animation */
+  }
+ 
+  /* Hover effect: triggers when the mouse is over the button */
+  .follow-btn:hover {
+    background: #4338ca;    /* darker shade */
+    transform: translateY(-2px); /* button lifts up slightly */
+  }
+ 
+  .follow-btn:active {
+    transform: translateY(0); /* button "presses down" on click */
+  }
+ 
+</style>
+</head>
+<body>
+ 
+  <!-- ========== Profile Card ========== -->
+  <div class="card">
+ 
+    <!-- Placeholder profile image (replace src with a real photo URL later) -->
+    <img
+      class="profile-img"
+      src="https://via.placeholder.com/150"
+      alt="Profile picture"
+    >
+ 
+    <h2 class="name">Rashmitha</h2>
+    <p class="job-title">UI/UX Designer</p>
+ 
+    <p class="bio">
+      Passionate about clean design and great user experiences.
+      I turn ideas into simple, beautiful interfaces.
+    </p>
+ 
+    <button class="follow-btn">Follow</button>
+ 
+  </div>
+ 
+</body>
+</html>
