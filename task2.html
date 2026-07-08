@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+        form {
+            background: #ffffff;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            width: 400px;
+        }
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #34495e;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .inline-group label {
+            display: inline-block;
+            font-weight: normal;
+            margin-right: 15px;
+        }
+        .inline-group input {
+            margin-right: 5px;
+        }
+        .buttons {
+            margin-top: 25px;
+            text-align: center;
+        }
+        input[type="submit"], input[type="reset"] {
+            padding: 10px 20px;
+            margin: 0 8px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        input[type="submit"] {
+            background-color: #27ae60;
+            color: white;
+        }
+        input[type="reset"] {
+            background-color: #e74c3c;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+ 
+<form action="#" method="post">
+    <h2>Student Registration Form</h2>
+ 
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+ 
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+ 
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" placeholder="10-digit number" pattern="[0-9]{10}" required>
+ 
+    <label>Gender:</label>
+    <div class="inline-group">
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label>
+ 
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+ 
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label>
+    </div>
+ 
+    <label>Skills:</label>
+    <div class="inline-group">
+        <input type="checkbox" id="html" name="skills" value="HTML">
+        <label for="html">HTML</label>
+ 
+        <input type="checkbox" id="css" name="skills" value="CSS">
+        <label for="css">CSS</label>
+ 
+        <input type="checkbox" id="js" name="skills" value="JavaScript">
+        <label for="js">JavaScript</label>
+ 
+        <input type="checkbox" id="python" name="skills" value="Python">
+        <label for="python">Python</label>
+    </div>
+ 
+    <label for="city">City:</label>
+    <select id="city" name="city">
+        <option value="">-- Select City --</option>
+        <option value="chennai">Chennai</option>
+        <option value="mumbai">Mumbai</option>
+        <option value="delhi">Delhi</option>
+        <option value="bangalore">Bangalore</option>
+        <option value="hyderabad">Hyderabad</option>
+    </select>
+ 
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob" required>
+ 
+    <div class="buttons">
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </div>
+</form>
+ 
+</body>
+</html>
